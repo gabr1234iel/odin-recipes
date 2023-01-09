@@ -4,17 +4,49 @@
     <head>
         <meta charset="utf-8">
         <title>Odin Recipes - the Italian vers.</title>
+        <link rel="stylesheet", href="style.css">
+        
     </head>
-    <body>
-        <h1>Odin Recipes - <em>the Italian vers.</em></h1>
-            <img src="./img/chef.jpeg" width="1600" height="600" alt="CHEF KISS">
-            <ul>
-                <h2>
+    
+    <body class="bg">
+
+        <style>
+            #invisibleButton {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+        </style>
+          
+        <div id="invisibleButton"></div>
+          
+        <audio id="myAudio">
+            <source src="./audio/rain.mp3" type="audio/mpeg">
+        </audio>
+          
+        <script>
+            var audio = document.getElementById("myAudio");
+            audio.volume = 0.5;
+            var invisibleButton = document.getElementById("invisibleButton");
+          
+            invisibleButton.addEventListener("mouseenter", function() {
+              audio.play();
+            });
+        </script>
+
+        <div id="titleclass"><em>Odin Recipes - the Italian vers.</em></div>
+            <ul class="recipe">
+                <li><a href="./recipes/cassatasiciliana.html">Cassata Sicilianaa</a></li>
                 <li><a href="./recipes/lasagna.html">Lasagna</a></li>
                 <li><a href="./recipes/ossobuco.html">Osso Buco</a></li>
-                <li><a href="./recipes/cassatasiciliana.html">Cassata Sicilianaa</a></li>
-                </h2>
             </ul>
     </body>
 
+    
+
+    
+      
 </html>
